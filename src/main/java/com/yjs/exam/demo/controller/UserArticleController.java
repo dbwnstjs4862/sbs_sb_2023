@@ -61,6 +61,15 @@ public class UserArticleController {
 		articles.remove(article);
 		
 	}
+	
+	private void modifyArticle(int id, String title, String body) {
+		Article article = getArticle(id);
+		
+		article.setTitle(title);
+		article.setBody(body);
+		
+	}
+	
 	// 서비스 메서드 끝
 
 	// 액션 메서드 시작
@@ -92,4 +101,17 @@ public class UserArticleController {
 	}
 	// 액션 메서드 끝
 	
+	@RequestMapping("/user/article/doModify")
+	@ResponseBody
+	public String doModify(int id, String title, String body) {
+		Article article = getArticle(id);
+		
+		if ( article == null ) {
+			return id + "번 게시물이 존재하지 않습니다.";
+		}
+		
+		modifyArticle(id, title, body);
+		
+		return id + "번 게시물이 수정되었습니다.";
+	}
 }
