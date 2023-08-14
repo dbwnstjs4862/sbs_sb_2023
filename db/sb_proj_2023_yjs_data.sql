@@ -27,14 +27,15 @@ CREATE TABLE `article` (
   `title` char(100) NOT NULL,
   `body` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `article` */
 
 insert  into `article`(`id`,`regDate`,`updateDate`,`title`,`body`) values 
-(1,'2023-08-11 11:44:38','2023-08-11 11:44:38','제목 1','내용 1'),
 (2,'2023-08-11 11:44:38','2023-08-11 11:44:38','제목 2','내용 2'),
-(3,'2023-08-11 11:44:38','2023-08-11 11:44:38','제목 3','내용 3');
+(3,'2023-08-11 11:44:38','2023-08-11 11:44:38','제목 3','내용 3'),
+(4,'2023-08-11 13:35:21','2023-08-11 13:35:21','창민이바보','ㅇㅈ'),
+(5,'2023-08-14 09:32:39','2023-08-14 10:17:10','창민zz','ㅄ');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
