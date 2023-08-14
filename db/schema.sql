@@ -1,7 +1,7 @@
 # DB 생성
-DROP DATABASE IF EXISTS sb_proj_2023_t;
-CREATE DATABASE sb_proj_2023_t;
-USE sb_proj_2023_t;
+DROP DATABASE IF EXISTS sb_proj_2023_yjs;
+CREATE DATABASE sb_proj_2023_yjs;
+USE sb_proj_2023_yjs;
 
 # 게시물 테이블 생성
 CREATE TABLE article (
@@ -35,10 +35,10 @@ SELECT * FROM article;
 
 # 회원 테이블 생성
 CREATE TABLE `member` (
-    id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    regDate DATETIME NOT NULL,
-    updateDate DATETIME NOT NULL,
-    loginId CHAR(20) NOT NULL,
+	id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	regDate DATETIME NOT NULL,
+	updateDate DATETIME NOT NULL,
+	loginId CHAR(20) NOT NULL,
 	loginPw CHAR(60) NOT NULL,
 	`authLevel` SMALLINT(2) UNSIGNED DEFAULT 3 COMMENT '(3=일반, 7=관리자)',
 	`name` CHAR(20) NOT NULL,
